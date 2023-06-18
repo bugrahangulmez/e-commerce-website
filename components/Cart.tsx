@@ -14,7 +14,10 @@ const Cart = () => {
   return (
     <div className="mt-20 flex flex-col items-center">
       {cartList.map((item) => (
-        <section className="w-1/3 flex flex-col items-center justify-center p-10 m-10 border border-black relative">
+        <section
+          key={item.id}
+          className="w-1/3 flex flex-col items-center justify-center p-10 m-10 border border-black relative"
+        >
           <h1>{item.title}</h1>
           <p className="line-through">{item.price.toFixed(2)}$</p>
           <p>{item.discountedPrice.toFixed(2)}$</p>
